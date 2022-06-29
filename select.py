@@ -6,7 +6,7 @@ def create_db():
     """
     Создание базы phonenumber
     """
-    connection = psycopg2.connect(user='postgres', password='pandaman')
+    connection = psycopg2.connect(user='postgres', password='')
     connection.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT)
     cursor = connection.cursor()
     
@@ -266,7 +266,7 @@ def main():
     # Создание, выполняется 1 раз
     # create_db()
             
-    with psycopg2.connect(database='phonenumber' ,user='postgres', password='pandaman') as conn:
+    with psycopg2.connect(database='phonenumber' ,user='postgres', password='') as conn:
         
         menu(conn)
         
